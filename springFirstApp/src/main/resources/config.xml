@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="dev1" class="com.example.springFirstApp.Developer">
+		<property name="laptop" ref="lap"/>
+	</bean>
+	<bean id="dev2" class="com.example.springFirstApp.Developer"></bean>
+	<bean id="lap" class="com.example.springFirstApp.Laptop">
+		<constructor-arg name="name" value="Acer Aspire Lite"/>
+		<constructor-arg index="1" value="45000.0"/>
+	</bean>
+	<bean id="lap1" class="com.example.springFirstApp.Laptop">
+		<property name="name" value="Acer Nitro V"/>
+		<property name="price" value="60000.0"/>
+	</bean>
+</beans>
